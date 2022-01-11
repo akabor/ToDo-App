@@ -13,9 +13,15 @@ function App() {
         setTodos(newTodos); //replaces old todo list with new todo list that includes newest addition
         setValue(''); //clears out form to be empty again
     }
+    const removeToDo = e => {
+        const index = Number(e.target.id);
+        let temp = [...todos];
+        temp.splice(index,1);
+        setTodos(temp);
+    }
     return (<>
         {todos.map((todo, i) => 
-        <div className="todo" key={i}>{todo.text}</div>)}
+        <div className="todo" key={i} id={i} onClick={removeToDo}>{todo.text}</div>)}
         <form onSubmit={handleSubmit}>
             <input
               type="text"
