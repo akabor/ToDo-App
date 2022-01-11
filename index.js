@@ -31,6 +31,7 @@ function App() {
               onChange={e => setValue(e.target.value)}
               />
         </form>
+        <div className="subtext">Click on item to remove</div>
     </>);
 }
 

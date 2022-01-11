@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Arial';
+    padding-left: 10px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -44,4 +45,9 @@ code {
     padding: 1rem;
     height: 2.25rem;
     font-size: 24px;
+}
+
+.subtext{
+    padding: 5px;
+    color: gray;
 }
