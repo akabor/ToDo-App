@@ -9,7 +9,7 @@ Download all files to the same location on your computer. Navigate to the folder
 
 ## Roadmap
 
-Future updates to this program will include ability to edit list items and ability to remove list items. Style will also be improved.
+Future updates to this program will include ability to edit list items, check items off the list, priority box, and sort items by priority and completion. Style will also be improved.
 
 ## License Information
 
