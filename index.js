@@ -5,34 +5,29 @@ function App() {
             isComplete: false,
         }
     ]);
-    const [value, setValue] = React.useState('');
-    const handleSubmit = e => {
-        e.preventDefault(); //default behavior is to reload page, this prevents it
-        if (!value) return; //this is saying if value is empty then don't do anything
-        const newTodos = [...todos, {text:value, isComplete:false}]; //all the old todos plus the new one
-        setTodos(newTodos); //replaces old todo list with new todo list that includes newest addition
-        setValue(''); //clears out form to be empty again
+
+    const addTodo = text => {
+        const newTodos = [...todos, {text:text, isComplete:false}]; //all the old todos plus the new one
+        setTodos(newTodos); //replaces old todo list with new todo list that includes newest addition        
     }
-    const removeToDo = e => {
-        const index = Number(e.target.id);
-        let temp = [...todos];
+
+    const removeToDo = index => {
+        const temp = [...todos];
         temp.splice(index,1);
         setTodos(temp);
     }
-    return (<>
-        {todos.map((todo, i) => 
-        <div className="todo" key={i} id={i} onClick={removeToDo}>{todo.text}</div>)}
-        <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              className="input"
-              value={value}
-              placeholder="Add item then hit return or enter..."
-              onChange={e => setValue(e.target.value)}
-              />
-        </form>
-        <div className="subtext">Click on item to remove</div>
-    </>);
+    return (
+        <div className="app">
+            <TodoForm addTodo={addTodo}/>
+            <br />
+            <div className="todo-list">
+                {todos.map((todo, i) =>
+                    <Todo index={i} key={i} todo={todo} remove={removeToDo}/>
+                )}
+            </div>
+            <div className="subtext">Click on item to remove</div>
+        </div>
+    );
 }
 
 ReactDOM.render(

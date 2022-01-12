@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Arial';
-    padding-left: 10px;
+    padding: 0px 10px 10px 10px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -11,29 +11,42 @@ code {
 }
 
 .app {
-    background: #209cee;
+    background: tan;
     padding: 30px;
-    height: 100vh;
+    height: auto;
+    border-radius: 10px;
 }
 
 .todo-list {
-    background: #e8e8e8;
+    background: papayawhip;
     border-radius: 4px;
     padding: 5px;
-    max-width: 400px;
+    max-width: 490px;
+}
+
+.subtext {
+    padding: 5px;
+    color: white;
+}
+
+.heading {
+    padding: 10px 10px 10px 10px;
+    background-color: tan;
+    border-radius: 10px;
+    color: white;
 }
 
 .todo {
     background: #fff;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
-    padding: 3px 10px;
-    font-size: 24px;
-    margin-bottom: 6px;
+    padding: 3px 3px;
+    font-size: 18px;
     border-radius: 3px;
+    margin-bottom: 3px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    opacity: 0.8;
 }
 
 .input {
@@ -44,10 +57,7 @@ code {
     box-shadow: none;
     padding: 1rem;
     height: 2.25rem;
-    font-size: 24px;
-}
-
-.subtext{
-    padding: 5px;
-    color: gray;
+    font-size: 18px;
+    opacity: 0.8;
+    max-width: 500px;
 }
