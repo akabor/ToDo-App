@@ -49,6 +49,11 @@ code {
     opacity: 0.8;
 }
 
+.todo:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
 .input {
     width: 100%;
     box-sizing: border-box;
