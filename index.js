@@ -1,7 +1,7 @@
 function App() {
     const [todos, setTodos] = React.useState([
         {
-            text: 'Build ToDo app',
+            text: 'Create To-Do list',
             isComplete: false,
         }
     ]);
@@ -12,7 +12,7 @@ function App() {
     }
 
     const removeToDo = index => {
-        const temp = [...todos];
+        let temp = [...todos];
         temp.splice(index,1);
         setTodos(temp);
     }
