@@ -4,6 +4,7 @@ body {
     padding: 0px 10px 10px 10px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    max-width: 500px;
 }
 
 code {
